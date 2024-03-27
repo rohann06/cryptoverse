@@ -21,14 +21,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TanstackQueryProvider>
-          <div className="  flex flex-col md:flex-row gap-x-3 ">
-            <div className=" hidden md:block">
+          <div className="  flex flex-col lg:flex-row gap-x-3 ">
+            <div className=" hidden lg:block">
               <Sidenav />
             </div>
-            <div className=" md:hidden block">
+            <div className=" lg:hidden block">
               <MobileNav />
             </div>
-            <div className=" md:pl-[15.5%] pt-20 md:pt-6">{children}</div>
+            <div className=" lg:pl-[15.5%] pt-20 lg:pt-6">{children}</div>
           </div>
         </TanstackQueryProvider>
       </body>

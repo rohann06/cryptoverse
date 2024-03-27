@@ -18,8 +18,8 @@ const NavOptions = ({ navOption }: NavOptionsProps) => {
     <Link href={navOption.href}>
       <div
         className={` ${
-          pathname === navOption.href && "md:bg-[#173863] font-bold md:font-semibold"
-        } md:hover:bg-[#173863] px-5 py-3 md:rounded-[10px]`}
+          pathname === navOption.href && "lg:bg-[#173863] font-bold lg:font-semibold"
+        } lg:hover:bg-[#173863] px-5 py-3 lg:rounded-[10px]`}
       >
         <div className=" flex items-center gap-x-2">
           <p className=" text-[22px]">{navOption.icon}</p>
