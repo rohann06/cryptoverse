@@ -28,7 +28,7 @@ export default function RootLayout({
             <div className=" lg:hidden block">
               <MobileNav />
             </div>
-            <div className=" lg:pl-[15.5%] pt-20 lg:pt-6">{children}</div>
+            <div className=" lg:pl-[15.5%] px-[6px] lg:px-0 pt-20 lg:pt-5 w-full">{children}</div>
           </div>
         </TanstackQueryProvider>
       </body>
