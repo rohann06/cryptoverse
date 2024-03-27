@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import Sidenav from "@/components/(navigation)/Sidenav";
 import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 import MobileNav from "@/components/(navigation)/MobileNav";
 
-const inter = Inter({ subsets: ["latin"] });
+const open_Sans = Open_Sans({
+  subsets: ["latin", "latin-ext"],
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Cryptoverse",
@@ -19,16 +22,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={open_Sans.className}>
         <TanstackQueryProvider>
-          <div className="  flex flex-col lg:flex-row gap-x-3 ">
+          <div className=" bg-[#F8F8F8] h-screen flex flex-col lg:flex-row gap-x-3 ">
             <div className=" hidden lg:block">
               <Sidenav />
             </div>
             <div className=" lg:hidden block">
               <MobileNav />
             </div>
-            <div className=" lg:pl-[15.5%] px-[6px] lg:px-0 pt-20 lg:pt-5 w-full">{children}</div>
+            <div className=" lg:pl-[15.5%] px-[9px] lg:px-0 pt-20 lg:pt-5 w-full lg:mr-[40px]">{children}</div>
           </div>
         </TanstackQueryProvider>
       </body>

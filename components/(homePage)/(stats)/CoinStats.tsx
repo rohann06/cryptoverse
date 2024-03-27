@@ -22,7 +22,7 @@ const CoinStats = ({ globleState, isLoading }: CoinStatsProps) => {
       </div>
 
       {/* Crypto stats */}
-      <div className=" flex justify-between items-center flex-wrap gap-5 lg:gap-0 mt-[20px] lg:mt-[30px] lg:mr-32">
+      <div className=" flex justify-between items-center flex-wrap gap-[30px] lg:gap-0 mt-[20px] lg:mt-[30px]">
         <CryptoStateValue
           isLoading={isLoading}
           lable={"Total Cryptocurrencies:"}
