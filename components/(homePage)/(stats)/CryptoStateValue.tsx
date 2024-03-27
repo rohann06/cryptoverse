@@ -14,7 +14,7 @@ const CryptoStateValue = ({
 }: CryptoStateValueProps) => {
   return (
     <>
-      <div>
+      <div className=" lg:shadow-lg lg:rounded-[10px] md:py-4 md:px-7 lg:w-[15rem]">
         <p className=" text-[15px] text-gray-400 font-medium">{lable}</p>
         {isLoading ? (
           <Loading />

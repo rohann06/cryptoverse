@@ -1,6 +1,7 @@
 import React from "react";
 import CryptoStateValue from "./CryptoStateValue";
 import millify from "millify";
+import Headings from "@/components/Headings";
 
 interface CoinStatsProps {
   globleState: {
@@ -10,16 +11,14 @@ interface CoinStatsProps {
     total24hVolume: number;
     totalMarkets: number;
   };
-  isLoading:boolean
+  isLoading: boolean;
 }
 
 const CoinStats = ({ globleState, isLoading }: CoinStatsProps) => {
   return (
     <div>
       <div>
-        <p className=" text-[22px] lg:text-[30px] font-bold lg:font-semibold text-center md:text-left">
-          Global Crypto Stats
-        </p>
+        <Headings title={"Global Crypto Stats "} />
       </div>
 
       {/* Crypto stats */}
@@ -35,17 +34,17 @@ const CoinStats = ({ globleState, isLoading }: CoinStatsProps) => {
           numbers={millify(globleState?.totalExchanges)}
         />
         <CryptoStateValue
-        isLoading={isLoading}
+          isLoading={isLoading}
           lable={"Total Market Cap:"}
           numbers={millify(globleState?.totalMarketCap)}
         />
         <CryptoStateValue
-        isLoading={isLoading}
+          isLoading={isLoading}
           lable={"Total 24h Volume:"}
           numbers={millify(globleState?.total24hVolume)}
         />
         <CryptoStateValue
-        isLoading={isLoading}
+          isLoading={isLoading}
           lable={"Total Markets:"}
           numbers={millify(globleState?.totalMarkets)}
         />
