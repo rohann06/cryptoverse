@@ -47,7 +47,7 @@ const CoinCard = ({
           <div className=" flex flex-col gap-y-2 py-4">
             <div className=" flex items-center gap-x-2">
               <p>Price:</p>
-              <p className=" font-semibold">{millify(coinPrice)}</p>
+              <p className=" font-semibold">{millify(coinPrice)}{" "}$</p>
             </div>
             <div className=" flex items-center gap-x-2">
               <p>MarketCap:</p>
