@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Sidenav from "@/components/(navigation)/Sidenav";
 import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
 import MobileNav from "@/components/(navigation)/MobileNav";
 
-const open_Sans = Open_Sans({
+const rubick = Rubik({
   subsets: ["latin", "latin-ext"],
   weight: "400"
 });
@@ -22,9 +22,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={open_Sans.className}>
+      <body className={rubick.className}>
         <TanstackQueryProvider>
-          <div className=" bg-[#F8F8F8] h-screen flex flex-col lg:flex-row gap-x-3 ">
+          <div className=" lg:bg-[#F8F8F8] h-screen flex flex-col lg:flex-row gap-x-3 ">
             <div className=" hidden lg:block">
               <Sidenav />
             </div>
