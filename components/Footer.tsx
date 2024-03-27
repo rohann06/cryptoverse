@@ -11,7 +11,6 @@ const Footer = () => {
       >
         Rohan Ahire{" "}
       </a>
-      ðŸš€
     </div>
   );
 };

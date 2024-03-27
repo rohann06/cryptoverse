@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Sidenav from "@/components/(navigation)/Sidenav";
 import TanstackQueryProvider from "@/providers/TanstackQueryProvider";
+import MobileNav from "@/components/(navigation)/MobileNav";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children, 
+  children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -20,11 +21,14 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TanstackQueryProvider>
-          <div className="  flex flex-row gap-x-3 ">
+          <div className="  flex flex-col md:flex-row gap-x-3 ">
             <div className=" hidden md:block">
               <Sidenav />
             </div>
-            <div className=" md:pl-[15.5%] md:pt-6">{children}</div>
+            <div className=" md:hidden block">
+              <MobileNav />
+            </div>
+            <div className=" md:pl-[15.5%] pt-20 md:pt-6">{children}</div>
           </div>
         </TanstackQueryProvider>
       </body>
