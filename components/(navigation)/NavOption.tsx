@@ -10,7 +10,7 @@ interface NavOptionsProps {
     icon: any;
     href: string;
   };
-  setOpenNav: any;
+  setOpenNav?: any;
 }
 
 const NavOptions = ({ navOption, setOpenNav }: NavOptionsProps) => {
