@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={rubick.className}>
         <TanstackQueryProvider>
-          <div className=" lg:bg-[#F8F8F8] h-screen flex flex-col lg:flex-row gap-x-3 ">
+          <div className="  flex flex-col lg:flex-row gap-x-3 ">
             <div className=" hidden lg:block">
               <Sidenav />
             </div>

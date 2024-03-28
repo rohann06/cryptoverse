@@ -4,7 +4,7 @@ import React from "react";
 import millify from "millify";
 
 interface CoinCardProps {
-  rank: number;
+  rank?: number;
   coinName: string;
   icon: string;
   isLoading: boolean;
@@ -23,12 +23,12 @@ const CoinCard = ({
   dailyChnage,
 }: CoinCardProps) => {
   return (
-    <div className=" border border-gray-200 bg-white rounded-[10px] p-6">
+    <div className=" border border-gray-200 bg-white rounded-[10px] p-4 md:p-6">
       {isLoading ? (
         <Loading />
       ) : (
         <div>
-          <div className=" flex items-center justify-between mb-2">
+          <div className=" flex items-center justify-between mb-1 md:mb-2">
             <div className=" flex items-center gap-x-1 font-semibold">
               <p>{rank}.</p>
               <p>{coinName}</p>
@@ -47,7 +47,7 @@ const CoinCard = ({
           <div className=" flex flex-col gap-y-2 py-4">
             <div className=" flex items-center gap-x-2">
               <p>Price:</p>
-              <p className=" font-semibold">{millify(coinPrice)}{" "}$</p>
+              <p className=" font-semibold">{millify(coinPrice)} $</p>
             </div>
             <div className=" flex items-center gap-x-2">
               <p>MarketCap:</p>

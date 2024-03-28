@@ -6,9 +6,7 @@ import CoinStats from "./(stats)/CoinStats";
 import TopCoins from "./(topCoins)/TopCoins";
 
 const HomePage = () => {
-  // Access the client
-  const queryClient = useQueryClient();
-
+  
   const { data, isLoading, isError } = useQuery({
     queryKey: ["coinDetails"],
     queryFn: async () => {

@@ -29,7 +29,7 @@ const MobileNav = () => {
       {openNav && (
         <div className=" bg-white absolute w-full mt-16 shadow-lg">
           {navOptions.map((navOption, i) => (
-            <NavOptions key={i} navOption={navOption} />
+            <NavOptions setOpenNav={setOpenNav} key={i} navOption={navOption} />
           ))}
         </div>
       )}

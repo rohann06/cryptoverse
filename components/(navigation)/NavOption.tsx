@@ -10,15 +10,18 @@ interface NavOptionsProps {
     icon: any;
     href: string;
   };
+  setOpenNav: any;
 }
 
-const NavOptions = ({ navOption }: NavOptionsProps) => {
+const NavOptions = ({ navOption, setOpenNav }: NavOptionsProps) => {
   const pathname = usePathname();
   return (
     <Link href={navOption.href}>
       <div
+        onClick={() => setOpenNav(false)}
         className={` ${
-          pathname === navOption.href && "lg:bg-[#173863] font-bold lg:font-semibold"
+          pathname === navOption.href &&
+          "lg:bg-[#173863] font-bold lg:font-semibold"
         } lg:hover:bg-[#173863] px-5 py-3 lg:rounded-[10px]`}
       >
         <div className=" flex items-center gap-x-2">

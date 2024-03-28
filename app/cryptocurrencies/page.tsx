@@ -1,9 +1,12 @@
-import React from 'react'
+import AllCryptoCrurrency from "@/components/(cryptoCurrencies)/AllCryptoCrurrency";
+import React from "react";
 
 const Cryptocurrencies = () => {
   return (
-    <div>Cryptocurrencies</div>
-  )
-}
+    <div>
+      <AllCryptoCrurrency />
+    </div>
+  );
+};
 
-export default Cryptocurrencies
+export default Cryptocurrencies;
