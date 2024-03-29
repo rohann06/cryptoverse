@@ -1,12 +1,12 @@
 "use client";
 import React from "react";
-import { useQuery, useQueryClient } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import CoinStats from "./(stats)/CoinStats";
 import TopCoins from "./(topCoins)/TopCoins";
+import TopNews from "./(topNewses)/TopNews";
 
 const HomePage = () => {
-  
   const { data, isLoading, isError } = useQuery({
     queryKey: ["coinDetails"],
     queryFn: async () => {
@@ -36,6 +36,7 @@ const HomePage = () => {
     <div>
       <CoinStats isLoading={isLoading} globleState={globleState} />
       <TopCoins isLoading={isLoading} cryptoCoins={cryptoCoins} />
+      <TopNews />
     </div>
   );
 };

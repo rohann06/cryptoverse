@@ -10,15 +10,13 @@ interface NavOptionsProps {
     icon: any;
     href: string;
   };
-  setOpenNav?: any;
 }
 
-const NavOptions = ({ navOption, setOpenNav }: NavOptionsProps) => {
+const NavOptions = ({ navOption }: NavOptionsProps) => {
   const pathname = usePathname();
   return (
     <Link href={navOption.href}>
       <div
-        onClick={() => setOpenNav(false)}
         className={` ${
           pathname === navOption.href &&
           "lg:bg-[#173863] font-bold lg:font-semibold"

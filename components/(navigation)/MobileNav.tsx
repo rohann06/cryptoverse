@@ -12,7 +12,7 @@ const MobileNav = () => {
   const [openNav, setOpenNav] = useState(false);
   return (
     <div>
-      <div className=" fixed top-0 w-full bg-[#00224D] text-white py-5 px-3">
+      <div className=" z-30 fixed top-0 w-full bg-[#00224D] text-white py-5 px-3">
         <div className=" flex justify-between items-center">
           <Link href={"/"}>
             <div className=" flex items-center gap-x-1 text-[20px] font-bold">
@@ -28,8 +28,8 @@ const MobileNav = () => {
 
       {openNav && (
         <div className=" bg-white absolute w-full mt-16 shadow-lg">
-          {navOptions.map((navOption, i) => (
-            <NavOptions setOpenNav={setOpenNav} key={i} navOption={navOption} />
+          {navOptions?.map((navOption, i) => (
+            <NavOptions key={i} navOption={navOption} />
           ))}
         </div>
       )}

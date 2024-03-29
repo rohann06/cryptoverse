@@ -7,7 +7,6 @@ import MobileNav from "@/components/(navigation)/MobileNav";
 
 const rubick = Rubik({
   subsets: ["latin", "latin-ext"],
-  weight: "400"
 });
 
 export const metadata: Metadata = {
@@ -31,7 +30,9 @@ export default function RootLayout({
             <div className=" lg:hidden block">
               <MobileNav />
             </div>
-            <div className=" lg:pl-[15.5%] px-[9px] lg:px-0 pt-20 lg:pt-5 w-full lg:mr-[40px]">{children}</div>
+            <div className=" lg:pl-[15.5%] px-[9px] lg:px-0 pt-20 lg:pt-5 w-full lg:mr-[40px]">
+              {children}
+            </div>
           </div>
         </TanstackQueryProvider>
       </body>
