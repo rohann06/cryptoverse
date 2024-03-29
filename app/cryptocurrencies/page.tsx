@@ -1,10 +1,10 @@
-import AllCryptoCrurrency from "@/components/(cryptoCurrencies)/AllCryptoCrurrency";
+import Currency from "@/components/(cryptoCurrencies)/Currency";
 import React from "react";
 
 const Cryptocurrencies = () => {
   return (
     <div>
-      <AllCryptoCrurrency />
+      <Currency />
     </div>
   );
 };

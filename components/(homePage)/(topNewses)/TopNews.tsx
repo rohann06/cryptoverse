@@ -8,7 +8,7 @@ const TopNews = () => {
   return (
     <div className=" my-[40px] lg:mt-[55px] ">
       <div className=" lg:flex items-center justify-between">
-        <Headings title={"Top Crypto News In The World"} />
+        <Headings title={"Populer Crypto News In The World"} />
         <Link href={"/news"}>
           <p className=" lg:flex items-center gap-x-1 hover:text-[#3f7ed1] hidden text-[#173863] font-semibold text-[18px] underline">
             <FaLongArrowAltLeft />

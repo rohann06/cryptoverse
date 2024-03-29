@@ -35,7 +35,7 @@ const HomePage = () => {
   return (
     <div>
       <CoinStats isLoading={isLoading} globleState={globleState} />
-      <TopCoins isLoading={isLoading} cryptoCoins={cryptoCoins} />
+      <TopCoins />
       <TopNews />
     </div>
   );

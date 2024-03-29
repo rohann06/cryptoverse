@@ -1,26 +1,45 @@
 "use client";
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
-import CoinCard from "../(homePage)/(topCoins)/CoinCard";
+import CoinCard from "./CoinCard";
 import Loading from "../Loading";
 import axios from "axios";
-import Headings from "../Headings";
-import { FaSearch } from "react-icons/fa";
 
-const AllCryptoCrurrency = () => {
+const AllCryptoCrurrency = ({
+  limit,
+  searchResult,
+  queryKey,
+}: {
+  limit: string;
+  searchResult?: string;
+  queryKey: string;
+}) => {
   const { data, isLoading, isError } = useQuery({
-    queryKey: ["allCoins"],
+    queryKey: [{ queryKey }, searchResult],
     queryFn: async () => {
-      const response = await axios.get(
-        "https://coinranking1.p.rapidapi.com/coins?limit=200",
-        {
-          headers: {
-            "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_APIKEY,
-            "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_APIHOST,
-          },
-        }
-      );
-      return response.data;
+      if (queryKey === "allCoins") {
+        const response = await axios.get(
+          `https://coinranking1.p.rapidapi.com/coins?limit=${limit}&search=${searchResult}`,
+          {
+            headers: {
+              "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_APIKEY,
+              "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_APIHOST,
+            },
+          }
+        );
+        return response.data;
+      } else {
+        const response = await axios.get(
+          `https://coinranking1.p.rapidapi.com/coins?limit=${limit}`,
+          {
+            headers: {
+              "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_APIKEY,
+              "X-RapidAPI-Host": process.env.NEXT_PUBLIC_RAPID_APIHOST,
+            },
+          }
+        );
+        return response.data;
+      }
     },
   });
 
@@ -33,16 +52,6 @@ const AllCryptoCrurrency = () => {
 
   return (
     <div>
-      <div className=" md:flex items-center gap-x-10">
-        <Headings title="Crypto Currencies" />
-
-        <div className=" border flex items-center bg-white rounded-full overflow-hidden lg:w-[500px]">
-          <input placeholder="write coin name eg.Biycoin..." type="text" className="outline-none px-5 py-3 w-full"/>
-          <button className=" bg-[#00224D] rounded-full text-white p-3">
-            <FaSearch />
-          </button>
-        </div>
-      </div>
       <div className=" mt-[20px] lg:mt-[30px] mb-10">
         {isLoading ? (
           <Loading
