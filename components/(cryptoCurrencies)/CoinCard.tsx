@@ -2,8 +2,10 @@ import Loading from "@/components/Loading";
 import Image from "next/image";
 import React from "react";
 import millify from "millify";
+import Link from "next/link";
 
 interface CoinCardProps {
+  uuid: string;
   rank?: number;
   coinName: string;
   icon: string;
@@ -14,19 +16,17 @@ interface CoinCardProps {
 }
 
 const CoinCard = ({
+  uuid,
   rank,
   coinName,
   icon,
-  isLoading,
   coinPrice,
   marketCap,
   dailyChnage,
 }: CoinCardProps) => {
   return (
-    <div className=" border border-gray-200 bg-white rounded-[10px] p-4 md:p-6">
-      {isLoading ? (
-        <Loading />
-      ) : (
+    <Link href={`/coinDetails/${uuid}`}>
+      <div className=" hover:shadow-md border border-gray-200 bg-white rounded-[10px] p-4 md:p-6">
         <div>
           <div className=" flex items-center justify-between mb-1 md:mb-2">
             <div className=" flex items-center gap-x-1 font-semibold">
@@ -65,8 +65,8 @@ const CoinCard = ({
             </div>
           </div>
         </div>
-      )}
-    </div>
+      </div>
+    </Link>
   );
 };
 

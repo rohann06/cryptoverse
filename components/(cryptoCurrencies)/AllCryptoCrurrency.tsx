@@ -62,6 +62,7 @@ const AllCryptoCrurrency = ({
             {allCurrencies?.map((coin: any, i: number) => (
               <CoinCard
                 key={i}
+                uuid={coin?.uuid}
                 isLoading={isLoading}
                 rank={coin?.rank}
                 coinName={coin?.name}
