@@ -6,15 +6,15 @@ const CoinDetailHeading = ({
   description,
 }: {
   title: string;
-  description: string;
+  description?: string;
 }) => {
   return (
     <div>
-      <p className=" flex items-center gap-x-1 text-[17px] md:text-[20px] font-semibold">
+      <p className=" flex items-center gap-x-1 text-[17px] md:text-[23px] font-bold">
         {" "}
-        <TbPointFilled className=" text-[20px] md:text-[25px]" /> {title} 
+        {title}
       </p>
-      <div className=" ml-5 md:ml-8 py-3 w-auto">
+      <div className=" py-3 w-auto">
         <p className=" md:text-lg font-light text-gray-400 text-sm">
           {description}
         </p>

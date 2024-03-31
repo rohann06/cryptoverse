@@ -37,14 +37,14 @@ interface CoinDescriptionStatesProps {
 
 const CoinDescriptionStates = ({ coin }: CoinDescriptionStatesProps) => {
   return (
-    <div className=" flex flex-col lg:flex-row  justify-between items-center gap-[50px] lg:gap-[10px]">
+    <div className=" flex flex-col lg:flex-row  justify-between items-center gap-[50px] lg:gap-[10px] mt-5 lg:mt-14">
       <div className=" lg:w-[50%] ">
         <CoinDetailHeading
           description={`An overview showing the stats of ${coin?.name}, such as base and quate currency,
           the rank, and trading volume.`}
           title={`${coin?.name} Value Statistics`}
         />
-        <div className=" flex flex-col gap-y-3 lg:gap-y-5 lg:px-8 lg:py-3">
+        <div className=" flex flex-col gap-y-3 lg:gap-y-5 lg:pr-9 lg:py-3">
           <State
             icon={<BiSolidDollarCircle />}
             title={"Price to USD"}
@@ -91,7 +91,7 @@ const CoinDescriptionStates = ({ coin }: CoinDescriptionStatesProps) => {
           description={`An overview showing the stats of all cryptocurrencies.`}
           title={`${coin?.name} Value Statistics`}
         />
-        <div className=" lg:mt-7 flex flex-col gap-y-3 lg:gap-y-5 lg:px-8 lg:py-3">
+        <div className=" lg:mt-7 flex flex-col gap-y-3 lg:gap-y-5 lg:pr-9 lg:py-3">
           <State
             icon={<PiGraphBold />}
             title={"Number Of Markets"}

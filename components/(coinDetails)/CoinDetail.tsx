@@ -7,6 +7,7 @@ import Image from "next/image";
 import CoinDetailHeading from "./CoinDetailHeading";
 import CoinDescriptionStates from "./CoinDescriptionStates";
 import Loading from "../Loading";
+import CoinDescriptionStatesLinks from "./CoinDescriptionStatesLinks";
 
 const CoinDetail = ({ uuid }: { uuid: string }) => {
   const { data, isLoading } = useQuery({
@@ -56,12 +57,16 @@ const CoinDetail = ({ uuid }: { uuid: string }) => {
               description={coin?.description}
             />
 
-
             {/* Price Grapg */}
 
             {/* States */}
             <div className=" mt-8">
               <CoinDescriptionStates coin={coin} />
+            </div>
+
+            {/* Links */}
+            <div className=" mt-8">
+              <CoinDescriptionStatesLinks coin={coin} />
             </div>
           </div>
         </div>

@@ -14,11 +14,11 @@ export const navOptions = [
     icon: <RiFundsFill />,
     href: "/cryptocurrencies",
   },
-  {
-    name: "Exchanges",
-    icon: <AiFillMoneyCollect />,
-    href: "/exchanges",
-  },
+  // {
+  //   name: "Exchanges",
+  //   icon: <AiFillMoneyCollect />,
+  //   href: "/exchanges",
+  // },
   {
     name: "News",
     icon: <FaNewspaper />,
