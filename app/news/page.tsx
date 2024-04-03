@@ -6,7 +6,7 @@ const News = () => {
   return (
     <div>
       <Headings title="Crypto News" />
-      <AllNews batchSize={30} />
+      <AllNews key="allNews" batchSize={25} />
     </div>
   );
 };

@@ -17,7 +17,7 @@ const TopNews = () => {
         </Link>
       </div>
       <div>
-        <AllNews batchSize={6} />
+        <AllNews key="topNews" batchSize={6} />
       </div>
     </div>
   );
