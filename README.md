@@ -15,11 +15,11 @@ I've got APIs from [rapidapi](https://rapidapi.com/hub), also there are some lib
 
 ## Functionality
 
-There are 3 pages in this website 
-#### First one is a home page which contains the Global Crypto Stats, Top 10 Crypto Coins In The World, and Populer Crypto News In The World.
+There are 3 pages on this website 
+#### The first one is a home page that contains the Global Crypto Stats, Top 10 Crypto Coins In The World, and Popular Crypto News In The World.
 ![image](https://github.com/rohan-ahire06/cryptoverse/assets/75326769/a7683dee-18df-4904-a6da-81c3de7d2275)
 
-#### The second one is Crypto Currencies page which contains all the crypto coins and their details also contains the search bar so that user can search for the coins
+#### The second one is the Crypto Currencies page which contains all the crypto coins and their details also contains a search bar so that users can search for the coins
 ![image](https://github.com/rohan-ahire06/cryptoverse/assets/75326769/da9e3783-f246-456d-ba7a-173eceb6f0c5)
 
 #### The third and final page is the Crypto News. This page provides all of the news about cryptocurrency and also indicates if that news is positive or not.
