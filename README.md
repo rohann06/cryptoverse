@@ -1,36 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Crypto verse 🪙
+#### This project is a fusion of two APIs, one for fetching real-time crypto price details and the other for accessing relevant news updates. Its purpose is to improve my proficiency in utilizing REST APIs while enhancing my front-end development skills.
+#### This project aimed to list all the crypto, their details, and the top  news worldwide about'em and also indicate whether it's positive or negative.
 
-## Getting Started
+## Live application
+[![Already deployed version](https://vercel.com/button)](https://cryptoverse-rohana6.vercel.app/)
 
-First, run the development server:
+## Technologies used
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+I've got APIs from ![rapidapi](https://rapidapi.com/hub), also there are some libraries and frameworks I've used below 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **NextJs**
+- **Tailwind css**
+- **Tanstack query**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Functionality
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+There are 3 pages in this website 
+#### First one is a home page which contains the Global Crypto Stats, Top 10 Crypto Coins In The World, and Populer Crypto News In The World.
+![image](https://github.com/rohan-ahire06/cryptoverse/assets/75326769/a7683dee-18df-4904-a6da-81c3de7d2275)
 
-## Learn More
+#### The second one is Crypto Currencies page which contains all the crypto coins and their details also contains the search bar so that user can search for the coins
+![image](https://github.com/rohan-ahire06/cryptoverse/assets/75326769/da9e3783-f246-456d-ba7a-173eceb6f0c5)
 
-To learn more about Next.js, take a look at the following resources:
+#### The third and final page is the Crypto News. This page provides all of the news about cryptocurrency and also indicates if that news is positive or not.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
