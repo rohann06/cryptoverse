@@ -7,7 +7,7 @@
 
 ## Technologies used
 
-I've got APIs from ![rapidapi](https://rapidapi.com/hub), also there are some libraries and frameworks I've used below 
+I've got APIs from [rapidapi](https://rapidapi.com/hub), also there are some libraries and frameworks I've used below 
 
 - **NextJs**
 - **Tailwind css**
